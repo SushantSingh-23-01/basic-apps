@@ -40,7 +40,7 @@ function setMusic(index) {
   audio.src = song.filePath;
   songName.textContent = song.title;
   artistName.textContent = song.artist;
-  coverImg.src = song['album-cover'];
+  coverImg.src = song['cover-img'];
 
   seekBar.max = song.duration;
   songDuration.textContent = formatDuration(song.duration);
