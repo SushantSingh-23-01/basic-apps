@@ -7,4 +7,6 @@ This frontend app is a responsive web-based music player built with vanilla HTML
 - **Auto-Play Next Track** 
 
 ## Demo:
-![App Demo](./assets/music-app-demo-mobile.jpg)
+<p align="center">
+  <img src="./assets/music-app-demo-mobile.jpg" alt="Album Cover">
+</p>
