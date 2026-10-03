@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player Engine</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+
+  <audio src="" id="audio"></audio>
+
+  <main class="music-player">
+    <h1 class="song-name">Song Title</h1>
+    <p class="artist-name">Artist Name</p>
+    <img class="cover-img" src="./assets/music-album.svg" alt="Album Cover">
+
+    <div class="song-slider">
+      <input type="range" class="seek-bar" min="0" max="100" value="0" step="any">
+      <span class="current-time">00:00</span>
+      <span class="song-duration">00:00</span>
+    </div>
+
+    <div class="controls">
+      <button class="reverse-btn">
+        <img src="./assets/left-chevron.svg" class="control-btn-icon" alr="Previous Track">
+      </button>
+      <button class="play-btn" data-active="false">
+        <img src="./assets/play.svg" class="play-btn-icon" alt="Play/Pause">
+      </button>
+      <button class="forward-btn">
+        <img src="./assets/right-chevron.svg" class="control-btn-icon" alt="Next Track">
+      </button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

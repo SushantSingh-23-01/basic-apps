@@ -1,0 +1,230 @@
+:root {
+  --bg-primary: #403d88;
+  --accent-primary: #f599c6;
+  --accent-secondary: #b67694;
+  --accent-tertiary: #965f79;
+  --text-primary: #ffea88;
+  --button-primary: #7ddcad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Base Styles (Mobile First)
+   ========================================================================== */
+
+.music-player {
+  width: 100%;
+  max-width: 23.5rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 1.25rem;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+}
+
+.song-name,
+.artist-name {
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.song-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.artist-name {
+  font-size: 1.125rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.cover-img {
+  width: 100%;
+  max-width: 15rem; 
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.song-slider {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.seek-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--accent-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--accent-tertiary);
+  cursor: pointer;
+}
+
+.seek-bar::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--accent-secondary);
+  border: none;
+  cursor: pointer;
+}
+
+.current-time,
+.song-duration {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.current-time {
+  float: left;
+}
+
+.song-duration {
+  position: absolute;
+  right: 0;
+  bottom: -0.05rem;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.play-btn,
+.reverse-btn,
+.forward-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--button-primary);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.play-btn:active,
+.reverse-btn:active,
+.forward-btn:active {
+  transform: scale(0.95);
+}
+
+.play-btn {
+  width: 4rem;
+  height: 4rem;
+}
+
+.reverse-btn,
+.forward-btn {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.play-btn-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.control-btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Progressive Enhancement (Tablet & Desktop)
+   ========================================================================== */
+
+@media screen and (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+
+  .music-player {
+    max-width: 26rem;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .song-name {
+    font-size: 1.875rem;
+  }
+
+  .artist-name {
+    font-size: 1.25rem;
+  }
+
+  .cover-img {
+    max-width: 17rem;
+  }
+
+  .play-btn {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .reverse-btn,
+  .forward-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .play-btn-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .control-btn-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
