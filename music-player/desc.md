@@ -5,3 +5,6 @@ This frontend app is a responsive web-based music player built with vanilla HTML
 - **Playback Controls**
 - **Interactive Seeking & Progress Tracking**
 - **Auto-Play Next Track** 
+
+## Demo:
+![App Demo](./assets/music-app-demo-mobile.jpg)
