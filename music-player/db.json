@@ -1,0 +1,10 @@
+[
+    {
+        "id": "001",
+        "title": "Blinding Lights",
+        "artist": "The Weekend",
+        "cover-img": "./music-tracks/album-covers/blinding-lights-poster.jpg",
+        "filePath": "./music-tracks/the_weekend-blinding_lights.mp3",
+        "duration": 201
+    }
+]
